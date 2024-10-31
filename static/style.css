@@ -1,7 +1,147 @@
-body{
-    color: black
-}
+
 
 h1, h2{
     color : green
+}
+
+h1{
+    color : white
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+header {
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+header img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; /* Center the logo */
+}
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+.hero {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.hero h1 {
+    color: #333;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+.cta-button {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.cta-button:hover {
+    background-color: #218838;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #28a745;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* login css */
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text within the container */
+    width: 400px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Center the heading */
+    width: 100%; /* Optional: full width of the container */
+}
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1em;
+}
+.login-button:hover {
+    background-color: #218838;
+}
+.signup-link {
+    margin-top: 15px;
+    display: block;
+    color: #555;
+}
+
+/* Sign up css */
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.signup-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+}
+.signup-button:hover {
+    background-color: #218838;
 }

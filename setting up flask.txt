@@ -1,0 +1,15 @@
+1.create a folder to hold your application (e.g Simple_Flask_app)
+2. create a virtual environment : python -m venv venv 
+3. activate the virtual environment: .\venv\Scripts\activate
+  3.1 the go to view, command palletes, select python interpreter, browse for venv/python.exe
+4. check for upgrades : python -m pip install --upgrade pip
+5. install flask in dont have : python -m pip install flask
+6. create a app.py
+6.1 import flask from Flask
+6.2 create the instance of flask : app = Flask(__name__)
+6.3route : eg @app.route("/"):
+              def home():
+              return "hello world"
+
+7 run your flask app : python -m flask run 
+8. open the app on  http://127.0.0.1:5000
