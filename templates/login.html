@@ -1,14 +1,140 @@
-{% extends "layout.html"%}
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="login-container slide-up">
+    <h2>Login to Your Account</h2>
+    <form action="/UserDashboard" method="POST"> <!-- Assuming '/home' is the page after login -->
+        <input type="text" name="username" placeholder="Username" required maxlength="20">
+        <input type="password" name="password" placeholder="Password" required maxlength="20">
+
+        <button class="login-button btn btn-success" type="submit">Login</button>
+    </form>
+    <a href="/signup" class="signup-link">Don't have an account? <b style="color: Blue">Sign up</b></a>
+</div>
+
+<style>
+    /* Body styling with background image */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("{{ url_for('static', filename='background_image.jpg') }}");
+        /* Set your background image */
+        background-size: cover;
+        /* Cover the entire page */
+        background-position: center;
+        /* Center the background image */
+        background-repeat: no-repeat;
+        /* Prevent background repeat */
+    }
+
+    /* Login container styling */
+    .login-container {
+        width: 3000%;
+        /* Set width to 80% of the viewport */
+        max-width: 1500px;
+        /* Optional: maximum width constraint for better readability */
+        margin: 100px auto;
+        /* Center the container with space from the top */
+        padding: 40px 20px;
+        /* Padding for a bigger container */
+        background-color: rgba(255, 255, 255, 0.85);
+        /* Slightly transparent white background */
+        border-radius: 10px;
+        /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Shadow for depth */
+        font-size: 1.2em;
+        /* Increase font size for better readability */
+        text-align: center;
+        /* Center content inside the container */
+        min-height: 500px;
+        /* Set a minimum height (adjust as needed) */
+    }
 
 
-{%block content %}
-    <div class="login-container">
-        <h2>Login to Your Account</h2>
-        <form action="/UserDashboard" method="POST"> <!-- Assuming '/home' is the page after login -->
-            <input type="text" name="username" placeholder="Username" required> <br><br>
-            <input type="password" name="password" placeholder="Password" required><br><br>
-            <button class="login-button" type="submit">Login</button>
-        </form>
-        <a href="/signup" class="signup-link">Don't have an account? <b style="color: Blue">Sign up</b></a>
-    </div>
-{%endblock%}
+    /* Form styling */
+    form {
+        background-color: white;
+        /* White background for the form */
+        padding: 20px;
+        /* Padding around the form content */
+        border-radius: 10px;
+        /* Rounded corners */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* Subtle shadow */
+        width: 1000px;
+        /* Fixed width for the form */
+        margin: 0 auto;
+        /* Center the form within the container */
+    }
+
+    /* Input field styling */
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        /* Full width inputs */
+        padding: 10px;
+        /* Add some padding */
+        margin-bottom: 15px;
+        /* Space between fields */
+        border: 1px solid #ccc;
+        /* Light border */
+        border-radius: 5px;
+        /* Rounded corners */
+        box-sizing: border-box;
+        /* Include padding in width */
+    }
+
+    /* Button styling */
+    .login-button {
+        width: 100%;
+        /* Full width button */
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #2d772f;
+        /* Consistent button color */
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        /* Pointer on hover */
+        transition: background-color 0.3s ease;
+        /* Smooth transition for hover */
+        margin-top: 10px;
+        /* Space above the button for separation */
+    }
+
+    .login-button:hover {
+        background-color: #225a24;
+        /* Darker green on hover */
+    }
+
+    /* Signup link styling */
+    .signup-link {
+        display: block;
+        /* Block display for better layout */
+        text-align: center;
+        /* Center the link */
+        margin-top: 20px;
+        /* Space above the link */
+    }
+
+    /* Slide-up animation */
+    @keyframes slideUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .slide-up {
+        animation: slideUp 1s ease-in;
+        /* Apply the slide-up animation */
+    }
+</style>
+{% endblock %}
